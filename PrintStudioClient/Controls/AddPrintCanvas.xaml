@@ -1,0 +1,31 @@
+﻿<Window x:Class="CommonPrintStudio.AddPrintCanvas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"    WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize" 
+        ShowInTaskbar="False" 
+        Topmost="False"
+        Title="标签编辑" Height="300" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <TextBlock Text="标签Width(mm):" Margin="5" Grid.Row="1"/>
+        <TextBox x:Name="tbWidth" Grid.Row="1" Grid.Column="1" Margin="5"/>
+
+        <TextBlock Text="标签Height(mm):" Margin="5" Grid.Row="2"/>
+        <TextBox x:Name="tbHeight" Grid.Row="2" Grid.Column="1" Margin="5"/>
+
+        <StackPanel Grid.Row="3" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:Name="btnSure" Content="确定" Click="btnSure_Click" Margin="5"/>
+            <Button x:Name="btnCancel"  Content="取消" Click="btnCancel_Click" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>

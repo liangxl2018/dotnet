@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CE1F6CCE-7DAE-4027-9563-4DC02FBB8559}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PrintStudioPrintFunction</RootNamespace>
+    <AssemblyName>PrintStudioPrintFunction</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zxing">
+      <HintPath>..\LIB\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation">
+      <HintPath>..\LIB\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PrintBar2DDATAMATRIX.cs" />
+    <Compile Include="PrintBar2DDATAMATRIXPOSTEK_G3000.cs" />
+    <Compile Include="PrintBar2DHANXIN.cs" />
+    <Compile Include="PrintBar2DHANXINPOSTEK_G3000.cs" />
+    <Compile Include="PrintBar2DMaxiCode.cs" />
+    <Compile Include="PrintBar2DMaxiCodePOSTEK_G3000.cs" />
+    <Compile Include="PrintBar2DQR.cs" />
+    <Compile Include="PrintBar2DQRCommonPrinter.cs" />
+    <Compile Include="PrintBar2DQRPOSTEK_G2000.cs" />
+    <Compile Include="PrintBar2DQRPOSTEK_G3000.cs" />
+    <Compile Include="PrintBar2DQRPOSTEK_G6000.cs" />
+    <Compile Include="PrintBar2DQRZebraPrinter.cs" />
+    <Compile Include="PrintBarcode.cs" />
+    <Compile Include="PrintBarcodeCommonPrinter.cs" />
+    <Compile Include="PrintBarcodePOSTEK_G2000.cs" />
+    <Compile Include="PrintBarcodePOSTEK_G3000.cs" />
+    <Compile Include="PrintBarcodePOSTEK_G6000.cs" />
+    <Compile Include="PrintBarcodeZebraPrinter.cs" />
+    <Compile Include="PrintDiagonal.cs" />
+    <Compile Include="PrintDiagonalPOSTEK_G3000.cs" />
+    <Compile Include="PrintLineOr.cs" />
+    <Compile Include="PrintLineOrCommonPrinter.cs" />
+    <Compile Include="PrintLineOrPOSTEK_G2000.cs" />
+    <Compile Include="PrintLineOrPOSTEK_G3000.cs" />
+    <Compile Include="PrintLineOrPOSTEK_G6000.cs" />
+    <Compile Include="PrintLineOrZebraPrinter.cs" />
+    <Compile Include="PrintPCX.cs" />
+    <Compile Include="PrintPCXCommonPrinter.cs" />
+    <Compile Include="PrintPCXPOSTEK_G2000.cs" />
+    <Compile Include="PrintPCXPOSTEK_G3000.cs" />
+    <Compile Include="PrintPCXPOSTEK_G6000.cs" />
+    <Compile Include="PrintPCXZebraPrinter.cs" />
+    <Compile Include="PrintRectangle.cs" />
+    <Compile Include="PrintRectangleCommonPrinter.cs" />
+    <Compile Include="PrintRectanglePOSTEK_G2000.cs" />
+    <Compile Include="PrintRectanglePOSTEK_G3000.cs" />
+    <Compile Include="PrintRectanglePOSTEK_G6000.cs" />
+    <Compile Include="PrintRectangleZebraPrinter.cs" />
+    <Compile Include="PrintTextWorldCommonPrinter.cs" />
+    <Compile Include="PrintTextWorldPOSTEK_G2000.cs" />
+    <Compile Include="PrintTextWorldPOSTEK_G3000.cs" />
+    <Compile Include="PrintTextWorldPOSTEK_G6000.cs" />
+    <Compile Include="PrintTextWorldZebraPrinter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PrintTextWorld.cs" />
+    <Compile Include="PrintBar2DQRZebraPrinter600.cs" />
+    <Compile Include="PrintBarcodeZebraPrinter600.cs" />
+    <Compile Include="PrintLineOrZebraPrinter600.cs" />
+    <Compile Include="PrintPCXZebraPrinter600.cs" />
+    <Compile Include="PrintRectangleZebraPrinter600.cs" />
+    <Compile Include="PrintTextWorldZebraPrinter600.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PrintStudioModel\PrintStudioModel.csproj">
+      <Project>{95C8E2FC-ED81-4A65-81D9-B2FF7AAA9437}</Project>
+      <Name>PrintStudioModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PrintStudioRule\PrintStudioRule.csproj">
+      <Project>{3487EE22-118A-44A3-BD55-335CC3408C8F}</Project>
+      <Name>PrintStudioRule</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="说明.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

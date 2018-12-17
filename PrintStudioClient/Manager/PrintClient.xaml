@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="CommonPrintStudio.PrintClient"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:ctl="clr-namespace:CommonPrintStudio"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="263" d:DesignWidth="741" Background="#FFD0DBC5" Loaded="UserControl_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="配置模板:" Margin="5" VerticalAlignment="Center"/>
+            <ctl:DirOrFileSelect Grid.Column="1" Margin="5" VerticalAlignment="Center" x:Name="configModel"/>
+        </Grid>
+        <StackPanel Background="Transparent" VerticalAlignment="Stretch" MouseRightButtonDown="gridStudio_MouseRightButtonDown" MouseRightButtonUp="gridStudio_MouseRightButtonUp" HorizontalAlignment="Stretch"  Grid.Row="1" x:Name="gridStudio" Margin="5">
+        </StackPanel>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="1.5*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="1.5*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="0.8*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="0.8*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="0.8*"/>
+                <ColumnDefinition Width="1.5*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="打印驱动"  VerticalAlignment="Center"  Margin="5"  Grid.Column="0"/>
+            <ComboBox  x:Name="cbPrintType" Margin="5" Grid.Column="1" VerticalAlignment="Center"  SelectedIndex="2" />
+
+
+            <TextBlock Text="打印机"  VerticalAlignment="Center"  Margin="5"  Grid.Column="2"/>
+            <ComboBox  x:Name="cbPrintName" Margin="5" Grid.Column="3" VerticalAlignment="Center"  SelectedIndex="0" />
+
+            <TextBlock Text="X偏移" Margin="5" Grid.Row="0" Grid.Column="4" VerticalAlignment="Center" />
+            <TextBox Text="1" InputMethod.IsInputMethodEnabled="False"  Tag="0" x:Name="txtPrintX" Margin="5"  Grid.Row="0" Grid.Column="5" VerticalAlignment="Center"  TextChanged="txValue_TextChanged"/>
+            <TextBlock  Text="Y偏移" Margin="5" Grid.Row="0" Grid.Column="6" VerticalAlignment="Center"/>
+            <TextBox Text="1" InputMethod.IsInputMethodEnabled="False"  Tag="1" x:Name="txtPrintY" Grid.Row="0" Margin="5" Grid.Column="7" VerticalAlignment="Center"   TextChanged="txValue_TextChanged"/>
+
+            <TextBlock Grid.Column="8" Text="数量" Margin="5"  HorizontalAlignment="Left" VerticalAlignment="Center"></TextBlock>
+            <TextBox Name="txtQCNumber" Text="1" Grid.Column="9" Margin="5" Grid.Row="4" VerticalAlignment="Center" TextChanged="txValue_TextChanged"></TextBox>
+            <Button Grid.Column="10" Margin="5"  Padding="20,0" VerticalAlignment="Center" x:Name="btnLoadPrintConfig" Click="btnLoadPrintConfig_Click" Content="打印"/>
+        </Grid>
+    </Grid>
+</UserControl>

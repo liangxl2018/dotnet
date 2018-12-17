@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="MefDemo.CloseableTabItemHeader"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Name="columnLabel" Width="*"></ColumnDefinition>
+            <ColumnDefinition Name="columnCloseButton" Width="20"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Name="lblTitle" Grid.Column="0" Style="{StaticResource CloseableTabItemLabel_RD}"/>
+        <Button Name="btnClose" Grid.Column="1" FontFamily="Courier" FontWeight="Bold" Style="{StaticResource CloseableTabItemButton_RD}"/>
+    </Grid>
+</UserControl>

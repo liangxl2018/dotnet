@@ -1,0 +1,120 @@
+﻿<Window x:Class="CommonPrintStudio.PrintKeyValueControl"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+   WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize" 
+        ShowInTaskbar="False" 
+        Topmost="False"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="值编辑栏" Height="631" Width="394" Loaded="Window_Loaded" Background="AliceBlue">
+    <TabControl>
+        <TabItem Header="配置" Margin="0,0,5,0">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <GroupBox Header="">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock FontWeight="Bold" Text="打印数据来源" Margin="5" Grid.Column="0" Grid.Row="0"/>
+                            <ComboBox Margin="5" Grid.Column="1" Grid.Row="0" DisplayMemberPath="Caption" x:Name="cbSource" SelectionChanged="cbSource_SelectionChanged">
+                            </ComboBox>
+                            <TextBlock FontWeight="Bold" Margin="5" Grid.Row="1" Grid.Column="0" Text="打印值"/>
+                            <TextBlock  Margin="5" Grid.Row="1" Grid.Column="1" Text="{Binding PrintKeyValue}" x:Name="tbPrintKeyValue"/>
+
+                            <TextBlock FontWeight="Bold" Margin="5" Grid.Row="2" Grid.Column="0" Text="ID"/>
+                            <TextBox IsReadOnly="True" Margin="5" Grid.Row="2" Grid.Column="1" Text="{Binding Index}"/>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="控件参数" Background="#FFE2E2FF" Margin="0,10,5,10" Grid.Row="1" Grid.ColumnSpan="2" x:Name="gdConttrolData">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock FontWeight="Bold" Text="控件值容器" Margin="5" Grid.Column="0" Grid.Row="0"/>
+                            <TextBox Margin="5" Grid.Column="1" Grid.Row="0" Text="{Binding ConttrolData.ValueContainer,UpdateSourceTrigger=PropertyChanged}"/>
+
+                            <TextBlock FontWeight="Bold" Margin="5" Grid.Row="1" Grid.Column="0" Text="控件Name"/>
+                            <TextBox Margin="5" Grid.Row="1" Grid.Column="1" Text="{Binding ConttrolData.ControlName,UpdateSourceTrigger=PropertyChanged}" />
+
+                            <TextBlock FontWeight="Bold" Margin="5" Grid.Row="2" Grid.Column="0" Text="控件Caption"/>
+                            <TextBox Margin="5" Grid.Row="2" Grid.Column="1" Text="{Binding ConttrolData.ControlCaption ,UpdateSourceTrigger=PropertyChanged}" />
+
+                            <TextBlock FontWeight="Bold" Margin="5" Grid.Row="3" Grid.Column="0" Text="属性Name"/>
+                            <TextBox Margin="5" Grid.Row="3" Grid.Column="1" Text="{Binding ConttrolData.PropertyName ,UpdateSourceTrigger=PropertyChanged}" />
+
+                            <TextBlock FontWeight="Bold" Margin="5" Grid.Row="4" Grid.Column="0" Text="子属性Name"/>
+                            <TextBox Margin="5" Grid.Row="4" Grid.Column="1" Text="{Binding ConttrolData.ChildPropertyName ,UpdateSourceTrigger=PropertyChanged}" />
+                        </Grid>
+                    </GroupBox>
+
+                    <GroupBox Header="方法参数" Grid.Row="2" Grid.ColumnSpan="2" x:Name="gdFunctionData" Background="#FFD1CCCC">
+                        <!--ValueContainer="" FunctionName="" FunctionIndexs=""   RandomLength="0"  RandomType="0"  IsHeadMontage="False" MontageLength="0"-->
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock FontWeight="Bold" Text="方法值容器" Margin="5" Grid.Column="0" Grid.Row="0"/>
+                            <TextBox Margin="5" Grid.Column="1" Grid.Row="0" Text="{Binding FunctionData.ValueContainer,UpdateSourceTrigger=PropertyChanged}"/>
+
+                            <TextBlock FontWeight="Bold" Margin="5" Grid.Row="1" Grid.Column="0" Text="方法Name"/>
+                            <TextBox Margin="5" Grid.Row="1" Grid.Column="1" Text="{Binding FunctionData.FunctionName,UpdateSourceTrigger=PropertyChanged}" />
+
+                            <TextBlock FontWeight="Bold" Margin="5" Grid.Row="2" Grid.Column="0" Text="参数IDS"/>
+                            <TextBox x:Name="tbIndexs" Margin="5" Grid.Row="2" Grid.Column="1" TextChanged="tbIndexs_TextChanged"/>
+
+                            <TextBlock FontWeight="Bold" Margin="5" Grid.Row="3" Grid.Column="0" Text="随机Length"/>
+                            <TextBox Margin="5" Grid.Row="3" Grid.Column="1" Text="{Binding FunctionData.RandomLength ,UpdateSourceTrigger=PropertyChanged}" />
+
+                            <TextBlock FontWeight="Bold" Margin="5" Grid.Row="4" Grid.Column="0" Text="随机类型"/>
+                            <TextBox Margin="5" Grid.Row="4" Grid.Column="1" Text="{Binding FunctionData.RandomType ,UpdateSourceTrigger=PropertyChanged}" />
+
+                            <TextBlock FontWeight="Bold" Margin="5" Grid.Row="5" Grid.Column="0" Text="从头剪裁"/>
+                            <CheckBox Margin="5" Grid.Row="5" Grid.Column="1"  IsChecked="{Binding FunctionData.IsHeadMontage ,UpdateSourceTrigger=PropertyChanged}" />
+
+                            <TextBlock FontWeight="Bold" Margin="5" Grid.Row="6" Grid.Column="0" Text="剪裁长度"/>
+                            <TextBox Margin="5" Grid.Row="6" Grid.Column="1" Text="{Binding FunctionData.MontageLength ,UpdateSourceTrigger=PropertyChanged}" />
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </ScrollViewer>
+        </TabItem>
+        <TabItem Header="一览">
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                <Grid x:Name="gdAttribute">
+
+                </Grid>
+            </ScrollViewer>
+        </TabItem>
+    </TabControl>
+</Window>

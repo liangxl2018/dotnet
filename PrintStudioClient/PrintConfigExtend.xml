@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Print Width="600" Height="400">
+  <!--PrintCaption:打印名称 PrintFunctionName:打印方法名 PrintKeyValue:打印关键参数值  DataSourceType:0 固定 1:界面 2:功能方法 Index:索引 IsValid:是否有效-->
+  <!--打印一维码-->
+  <PrintItem PrintCaption="一维码" PrintFunctionName="PrintBarcode" PrintKeyValue="{0}" DataSourceType="1" Index="0" IsValid="True" >
+
+    <!--界面获取数据-->
+    <ConttrolDataSource  ValueContainer="{0}" ControlName="tbMacAddress"  ControlCaption="Mac地址" PropertyName="Value" ChildPropertyName=""/>
+
+    <!--功能方法获取数据 目前支持剪裁和自定义功能方法-->
+    <FunctionDataSource  ValueContainer="" FunctionName="" FunctionIndexs=""   RandomLength="0"  RandomType="0"  IsHeadMontage="False" MontageLength="0"/>
+
+    <!--打印方法参数-->
+    <Parameters>
+      <Parameter Key="pX"          Value="390"/>
+      <Parameter Key="pY"          Value="10"/>
+      <Parameter Key="pDirec"      Value="0"/>
+      <Parameter Key="pCode"       Value="1"/>
+      <Parameter Key="narrowWidth" Value="2"/>
+      <Parameter Key="pHorizontal" Value="2"/>
+      <Parameter Key="pHeight"     Value="40"/>
+      <Parameter Key="pText"       Value="78"/>
+    </Parameters>
+  </PrintItem>
+
+  <!--打印文字 固态-->
+  <PrintItem PrintCaption="文字" PrintFunctionName="PrintTextWorld" PrintKeyValue="固定:Hello World" DataSourceType="0" Index="1" IsValid="True">
+
+    <!--界面获取数据-->
+    <ConttrolDataSource  ValueContainer="" ControlName=""  ControlCaption="" PropertyName="" ChildPropertyName=""/>
+
+    <!--功能方法获取数据 目前支持剪裁和自定义功能方法-->
+    <FunctionDataSource  ValueContainer="" FunctionName="" FunctionIndexs=""   RandomLength="0"  RandomType="0"  IsHeadMontage="False" MontageLength="0"/>
+
+    <!--打印方法参数-->
+    <Parameters>
+      <Parameter  Key="pX"         Value="390"/>
+      <Parameter  Key="pY"         Value="50"/>
+      <Parameter  Key="pHeight"    Value="40"/>
+      <Parameter  Key="fWidth"     Value="0"/>
+      <Parameter  Key="fType"      Value="Arial"/>
+      <Parameter  Key="fSpin"      Value="1"/>
+      <Parameter  Key="fWeight"    Value="500"/>
+      <Parameter  Key="fItalic"    Value="0"/>
+      <Parameter  Key="fUnline"    Value="0"/>
+      <Parameter  Key="fStrikeOut" Value="0"/>
+      <Parameter  Key="idName"     Value="23"/>
+    </Parameters>
+  </PrintItem>
+
+  <!--打印图片-->
+  <PrintItem  PrintCaption="图片" PrintFunctionName="PrintPCX" PrintKeyValue="qcpass.pcx" DataSourceType="0" Index="2" IsValid="True">
+
+    <!--界面获取数据-->
+    <ConttrolDataSource  ValueContainer="" ControlName=""  ControlCaption="" PropertyName="" ChildPropertyName=""/>
+
+    <!--功能方法获取数据 目前支持剪裁和自定义功能方法-->
+    <FunctionDataSource  ValueContainer="" FunctionName="" FunctionIndexs=""   RandomLength="0"  RandomType="0"  IsHeadMontage="False" MontageLength="0" />
+
+    <!--打印方法参数-->
+    <Parameters>
+      <Parameter Key="pX" Value="370"/>
+      <Parameter Key="pY" Value="100"/>
+    </Parameters>
+  </PrintItem>
+
+  <!--打印文字 动态-->
+  <PrintItem PrintCaption="文字" PrintFunctionName="PrintTextWorld" PrintKeyValue="动态:{0}" DataSourceType="2" Index="3" IsValid="True">
+
+    <!--界面获取数据-->
+    <ConttrolDataSource  ValueContainer="" ControlName=""  ControlCaption="" PropertyName="" ChildPropertyName="" />
+
+    <!--功能方法获取数据 目前支持剪裁和自定义功能方法-->
+    <FunctionDataSource  ValueContainer="{0}" FunctionName="GetRandomNumber" FunctionIndexs="3"   RandomLength="10"  RandomType="0"  IsHeadMontage="False" MontageLength="0" />
+
+    <!--打印方法参数-->
+    <Parameters>
+      <Parameter Key="pX" Value="390" />
+      <Parameter Key="pY" Value="180" />
+      <Parameter Key="pHeight" Value="40" />
+      <Parameter Key="fWidth" Value="0" />
+      <Parameter Key="fType" Value="Arial" />
+      <Parameter Key="fSpin" Value="1" />
+      <Parameter Key="fWeight" Value="500" />
+      <Parameter Key="fItalic" Value="0" />
+      <Parameter Key="fUnline" Value="0" />
+      <Parameter Key="fStrikeOut" Value="0" />
+      <Parameter Key="idName" Value="112724242211222" />
+    </Parameters>
+  </PrintItem>
+
+  <!--打印矩形-->
+  <PrintItem  PrintCaption="矩形" PrintFunctionName="PrintRectangle" PrintKeyValue="" DataSourceType="0"  Index ="4" IsValid="True">
+
+    <!--界面获取数据-->
+    <ConttrolDataSource  ValueContainer="" ControlName=""  ControlCaption="" PropertyName="" ChildPropertyName="" />
+
+    <!--功能方法获取数据 目前支持剪裁和自定义功能方法-->
+    <FunctionDataSource  ValueContainer="" FunctionName="" FunctionIndexs=""   RandomLength="0"  RandomType="0"  IsHeadMontage="False" MontageLength="0"/>
+
+    <!--打印方法参数-->
+    <Parameters>
+      <Parameter Key="pX"        Value="370"/>
+      <Parameter Key="pY"        Value="3"/>
+      <Parameter Key="thickness" Value="3"/>
+      <Parameter Key="pEX"       Value="800"/>
+      <Parameter Key="pEY"       Value="300"/>
+    </Parameters>
+  </PrintItem>
+
+  <!--打印直线-->
+  <PrintItem  PrintCaption="直线" PrintFunctionName="PrintLineOr" PrintKeyValue="" DataSourceType="0" Index="5" IsValid="True">
+
+    <!--界面获取数据-->
+    <ConttrolDataSource  ValueContainer="" ControlName=""  ControlCaption="" PropertyName="" ChildPropertyName=""/>
+
+    <!--功能方法获取数据 目前支持剪裁和自定义功能方法-->
+    <FunctionDataSource  ValueContainer="" FunctionName="" FunctionIndexs=""   RandomLength="0"  RandomType="0"  IsHeadMontage="False" MontageLength="0"/>
+
+    <!--打印方法参数-->
+    <Parameters>
+      <Parameter Key="pX" Value="390" />
+      <Parameter Key="pY" Value="170" />
+      <Parameter Key="pWidth" Value="200"/>
+      <Parameter Key="pHeight" Value="2"/>
+    </Parameters>
+  </PrintItem>
+
+  <!--打印斜线-->
+  <PrintItem  PrintCaption="斜线" PrintFunctionName="PrintDiagonal" PrintKeyValue="" DataSourceType="0" Index="6" IsValid="True">
+
+    <!--界面获取数据-->
+    <ConttrolDataSource  ValueContainer="" ControlName=""  ControlCaption="" PropertyName="" ChildPropertyName=""/>
+
+    <!--功能方法获取数据 目前支持剪裁和自定义功能方法-->
+    <FunctionDataSource  ValueContainer="" FunctionName="" FunctionIndexs=""   RandomLength="0"  RandomType="0"  IsHeadMontage="False" MontageLength="0"/>
+
+    <!--打印方法参数-->
+    <Parameters>
+      <Parameter Key="pX" Value="370"/>
+      <Parameter Key="pY" Value="230"/>
+      <Parameter Key="pHeight" Value="4"/>
+      <Parameter Key="pEx" Value="500"/>
+      <Parameter Key="pEy" Value="280"/>
+    </Parameters>
+  </PrintItem>
+
+  <!--打印QR二维码-->
+  <PrintItem  PrintCaption="QR二维码" PrintFunctionName="PrintBar2DQR" PrintKeyValue="www.baidu.com" DataSourceType="0" Index="7" IsValid="True">
+
+    <!--界面获取数据-->
+    <ConttrolDataSource  ValueContainer="" ControlName=""  ControlCaption="" PropertyName="" ChildPropertyName=""/>
+
+    <!--功能方法获取数据 目前支持剪裁和自定义功能方法-->
+    <FunctionDataSource  ValueContainer="" FunctionName="" FunctionIndexs=""   RandomLength="0"  RandomType="0"  IsHeadMontage="False" MontageLength="0" />
+
+    <!--打印方法参数-->
+    <Parameters>
+      <Parameter Key="pX" Value="660"/>
+      <Parameter Key="pY" Value="55"/>
+      <Parameter Key="w" Value="0"/>
+      <Parameter Key="v" Value="0"/>
+      <Parameter Key="o" Value="0"/>
+      <Parameter Key="r" Value="6"/>
+      <Parameter Key="m" Value="1"/>
+      <Parameter Key="g" Value="1"/>
+      <Parameter Key="s" Value="0"/>
+    </Parameters>
+  </PrintItem>
+
+  <!--打印MaxiCode二维码-->
+  <PrintItem  PrintCaption="MaxiCode二维码" PrintFunctionName="PrintBar2DMaxiCode" PrintKeyValue="www.baidu.com" DataSourceType="0" Index="8" IsValid="True">
+
+    <!--界面获取数据-->
+    <ConttrolDataSource  ValueContainer="" ControlName=""  ControlCaption="" PropertyName="" ChildPropertyName="" />
+
+    <!--功能方法获取数据 目前支持剪裁和自定义功能方法-->
+    <FunctionDataSource  ValueContainer="" FunctionName="" FunctionIndexs=""   RandomLength="0"  RandomType="0"  IsHeadMontage="False" MontageLength="0"/>
+
+    <!--打印方法参数-->
+    <Parameters>
+      <Parameter Key="pX" Value="23"/>
+      <Parameter Key="pY" Value="45"/>
+      <Parameter Key="m" Value="23"/>
+      <Parameter Key="u" Value="45"/>
+    </Parameters>
+  </PrintItem>
+
+  <!--打印HANXIN二维码-->
+  <PrintItem  PrintCaption="HANXIN二维码" PrintFunctionName="PrintBar2DHANXIN" PrintKeyValue="www.baidu.com" DataSourceType="0" Index="9" IsValid="True">
+
+    <!--界面获取数据-->
+    <ConttrolDataSource  ValueContainer="" ControlName=""  ControlCaption="" PropertyName="" ChildPropertyName="" />
+
+    <!--功能方法获取数据 目前支持剪裁和自定义功能方法-->
+    <FunctionDataSource  ValueContainer="" FunctionName="" FunctionIndexs=""   RandomLength="0"  RandomType="0"  IsHeadMontage="False" MontageLength="0" />
+
+    <!--打印方法参数-->
+    <Parameters>
+      <Parameter  Key="pX" Value="23"/>
+      <Parameter  Key="pY" Value="45"/>
+      <Parameter  Key="w" Value="23"/>
+      <Parameter  Key="v" Value="45"/>
+      <Parameter  Key="o" Value="45"/>
+      <Parameter  Key="r" Value="23"/>
+      <Parameter  Key="m" Value="45"/>
+      <Parameter  Key="g" Value="45"/>
+      <Parameter  Key="s" Value="45"/>
+    </Parameters>
+  </PrintItem>
+
+  <!--打印DATAMATRIX二维码-->
+  <PrintItem PrintCaption="DATAMATRIX二维码" PrintFunctionName="PrintBar2DDATAMATRIX" PrintKeyValue="www.baidu.com" DataSourceType="0" Index="10" IsValid="True">
+
+    <!--界面获取数据-->
+    <ConttrolDataSource  ValueContainer="" ControlName=""  ControlCaption="" PropertyName="" ChildPropertyName=""  />
+
+    <!--功能方法获取数据 目前支持剪裁和自定义功能方法-->
+    <FunctionDataSource  ValueContainer="" FunctionName="" FunctionIndexs=""   RandomLength="0"  RandomType="0"  IsHeadMontage="False" MontageLength="0" />
+
+    <!--打印方法参数-->
+    <Parameters>
+      <Parameter Key="pX" Value="23"/>
+      <Parameter Key="pY" Value="45"/>
+      <Parameter Key="w" Value="23"/>
+      <Parameter Key="v" Value="45"/>
+      <Parameter Key="o" Value="45"/>
+      <Parameter Key="m" Value="45"/>
+    </Parameters>
+  </PrintItem>
+</Print>

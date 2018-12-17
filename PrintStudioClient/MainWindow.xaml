@@ -1,0 +1,9 @@
+﻿<Window x:Class="CommonPrintStudio.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ctl="clr-namespace:CommonPrintStudio"
+        WindowStartupLocation="CenterScreen"
+           WindowState="Maximized" 
+        Title="标签打印助手1.0" Height="708" Width="1171" KeyUp="Window_KeyUp" Closing="Window_Closing" Loaded="Window_Loaded">
+    <ctl:TempletPrint x:Name="templePrint"/>
+</Window>

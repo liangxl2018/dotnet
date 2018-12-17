@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="CommonPrintStudio.DirOrFileSelect"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="32" d:DesignWidth="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="Auto" MinWidth="29" />
+        </Grid.ColumnDefinitions>
+        <Border BorderBrush="Brown" Grid.ColumnSpan="2" BorderThickness="1" ></Border>
+        <TextBox Margin="1" x:Name="tbFilePath" IsReadOnly="True" VerticalContentAlignment="Center" Grid.ColumnSpan="1" />
+        <Button Margin="1" x:Name="btnOpen" Click="btnOpen_Click"  Grid.Column="1">
+            <Button.Background>
+                <ImageBrush ImageSource="/CommonPrintStudio;component/Style/FileOrDir.png" />
+            </Button.Background>
+        </Button>
+    </Grid>
+</UserControl>

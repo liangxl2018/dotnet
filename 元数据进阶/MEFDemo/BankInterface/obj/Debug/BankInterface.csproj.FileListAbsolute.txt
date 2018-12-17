@@ -1,0 +1,12 @@
+D:\VSProject\MEFDemo\BankInterface\bin\Debug\BankInterface.dll
+D:\VSProject\MEFDemo\BankInterface\bin\Debug\BankInterface.pdb
+D:\VSProject\MEFDemo\BankInterface\obj\Debug\BankInterface.dll
+D:\VSProject\MEFDemo\BankInterface\obj\Debug\BankInterface.pdb
+C:\Users\Administrator\Desktop\MEFDemo\BankInterface\bin\Debug\BankInterface.dll
+C:\Users\Administrator\Desktop\MEFDemo\BankInterface\bin\Debug\BankInterface.pdb
+C:\Users\Administrator\Desktop\MEFDemo\BankInterface\obj\Debug\BankInterface.dll
+C:\Users\Administrator\Desktop\MEFDemo\BankInterface\obj\Debug\BankInterface.pdb
+C:\Users\Administrator\Desktop\MEF框架学习系列\元数据进阶\MEFDemo\BankInterface\bin\Debug\BankInterface.dll
+C:\Users\Administrator\Desktop\MEF框架学习系列\元数据进阶\MEFDemo\BankInterface\bin\Debug\BankInterface.pdb
+C:\Users\Administrator\Desktop\MEF框架学习系列\元数据进阶\MEFDemo\BankInterface\obj\Debug\BankInterface.dll
+C:\Users\Administrator\Desktop\MEF框架学习系列\元数据进阶\MEFDemo\BankInterface\obj\Debug\BankInterface.pdb
